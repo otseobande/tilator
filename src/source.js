@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import App from './components/app.vue';
-import {Sketch} from 'vue-color';
+import { VTooltip } from 'v-tooltip';
+
+Vue.directive('tooltip', VTooltip);
 
 Vue.component('app', App);
 
@@ -13,7 +15,7 @@ const app = new Vue({
 
 	},
 	components:{
-		'sketch-picker': Sketch,
+		
 	},
 	render: (c)=> c('app'),
 }).$mount('#app');
